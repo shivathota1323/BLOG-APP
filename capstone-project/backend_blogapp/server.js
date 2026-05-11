@@ -11,32 +11,14 @@ config();
 
 //create express app
 const app = exp();
-app.set("trust proxy", 1);
-
-const localFrontendUrl = "http://localhost:5173";
-const productionFrontendUrls = [
-  "https://blog-app-shiva2-l1iaq47lu-shivathota1323s-projects.vercel.app",
-  "https://blog-app-shiva2.vercel.app",
-];
-
-const frontendUrls = (process.env.FRONTEND_URL || "")
-  .split(",")
-  .map((url) => url.trim().replace(/\/$/, "")) // remove trailing slash
-  .filter(Boolean);
-
-const allowedOrigins = [...new Set([localFrontendUrl, ...productionFrontendUrls, ...frontendUrls])];
-
-app.use(
-  cors({
-    origin(origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-      return callback(new Error(`Origin ${origin} is not allowed by CORS`));
-    },
-    credentials: true,
-  }),
-);
+app.use(exp.json())
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://blog-app-shiva2.vercel.app/"
+  ],
+  credentials: true
+}));
 //add cookie parser middeleware
 app.use(cookieParser())
 //body parser middleware
