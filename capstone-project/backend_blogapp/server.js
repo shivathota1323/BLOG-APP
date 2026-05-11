@@ -14,7 +14,7 @@ const app = exp();
 app.set("trust proxy", 1);
 const localFrontendUrl = "http://localhost:5173";
 const productionFrontendUrls = [
-  "https://blog-app-thota-635zeblh9-shivathota1323s-projects.vercel.app",
+  "https://blog-app-shiva2-l1iaq47lu-shivathota1323s-projects.vercel.app/",
   "https://blog-app-shiva2.vercel.app",
 ];
 const frontendUrls = (process.env.FRONTEND_URL || "")
