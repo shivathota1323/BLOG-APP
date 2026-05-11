@@ -12,7 +12,11 @@ config();
 const app = exp();
 
 app.use(cors({
-  origin: "https://blog-app-shiva2-l1iaq47lu-shivathota1323s-projects.vercel.app",
+  origin: [
+    "http://localhost:5173",                // local dev
+    "https://blog-app-shiva2-l1iaq47lu-shivathota1323s-projects.vercel.app/" ,
+    //"https://blog-frontend-ten-pearl.vercel.app"// deployed frontend
+  ],
   credentials: true
 }));
 
