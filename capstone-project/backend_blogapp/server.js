@@ -11,7 +11,7 @@ config();
 
 //create express app
 const app = exp();
-aapp.set("trust proxy", 1);
+app.set("trust proxy", 1);
 
 const localFrontendUrl = "http://localhost:5173";
 const productionFrontendUrls = [
