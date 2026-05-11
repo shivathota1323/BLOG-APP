@@ -8,6 +8,12 @@ import { commonApp } from "./APIs/CommonAPI.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 config();
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://blog-app-shiva2-l1iaq47lu-shivathota1323s-projects.vercel.app",
+  credentials: true
+}));
 
 //create express app
 const app = exp();
