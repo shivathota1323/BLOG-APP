@@ -9,6 +9,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 config();
 //const cors = require("cors");
+const app = exp();
 
 app.use(cors({
   origin: "https://blog-app-shiva2-l1iaq47lu-shivathota1323s-projects.vercel.app",
@@ -16,7 +17,7 @@ app.use(cors({
 }));
 
 //create express app
-const app = exp();
+
 // app.set("trust proxy", 1);
 // const localFrontendUrl = "http://localhost:5173";
 // const productionFrontendUrls = [
