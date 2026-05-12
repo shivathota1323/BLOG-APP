@@ -19,12 +19,12 @@ app.get('/', (req, res) => {
   res.send('Blog API running...');
 });
 
-// Example API routes
-import userRoutes from './routes/userRoutes.js';
-import postRoutes from './routes/postRoutes.js';
+// // Example API routes
+// import userRoutes from './routes/userRoutes.js';
+// import postRoutes from './routes/postRoutes.js';
 
-app.use('/api/users', userRoutes);
-app.use('/api/posts', postRoutes);
+// app.use('/api/users', userRoutes);
+// app.use('/api/posts', postRoutes);
 //add cookie parser middleware
 app.use(cookieParser())
 //add cors middleware
